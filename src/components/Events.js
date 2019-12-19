@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Event from './Event'
+import AppContext from '../contexts/AppContext'
 
-const Events = ({state, dispatch}) => {
+const Events = () => {
+	const {state} = useContext(AppContext)
 	return (
 		<section className="col-12 col-xl-7 my-5">
 			<h1>イベント一覧</h1>
@@ -15,7 +17,7 @@ const Events = ({state, dispatch}) => {
 					</tr>
 				</thead>
 				<tbody>
-					{state.map((event, index) => (<Event key={index} event={event} dispatch={dispatch} />))}
+					{state.map((event, index) => (<Event key={index} event={event} />))}
 				</tbody>
 			</table>
 		</section>
