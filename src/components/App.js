@@ -1,6 +1,7 @@
 import React, { useReducer} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import EventForm from './EventForm'
+import OperationLogs from './OperationLogs'
 import Events from './Events'
 import AppContext from '../contexts/AppContext'
 import reducer from '../reducers'
@@ -18,6 +19,7 @@ const App = () => {
         <div className="row">
           <EventForm />
           <Events />
+          <OperationLogs />
         </div>
       </div>
     </AppContext.Provider>
